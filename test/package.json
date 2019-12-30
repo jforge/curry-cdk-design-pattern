@@ -2,7 +2,7 @@
   "name": "iam",
   "version": "0.1.0",
   "bin": {
-    "iam": "bin/iam.js"
+    "stack": "bin/stack.js"
   },
   "scripts": {
     "build": "tsc",
