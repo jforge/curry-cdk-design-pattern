@@ -8,9 +8,9 @@ test('IamStack Tests', () => {
     const stack = new Iam.IamStack(app, 'IamStack');
     // THEN
     expect(stack).toHaveResource('AWS::IAM::Group', {
-      "GroupName": "iam-group-billing",
+      GroupName: "iam-group-billing",
     });
     expect(stack).toHaveResource('AWS::IAM::User', {
-      "UserName": "iam-user-billing",
+      UserName: "iam-user-billing",
     });
 });

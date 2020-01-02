@@ -8,6 +8,14 @@ test('VpcStack Tests', () => {
     const stack = new Vpc.VpcStack(app, 'VpcStack');
     // THEN
     expect(stack).toHaveResource('AWS::EC2::VPC', {
-      "InstanceTenancy": "default"
+      EnableDnsHostnames: true,
+      EnableDnsSupport: true,
+      InstanceTenancy: "default",
+      Tags: [
+        {
+          "Key": "Name",
+          "Value": "VpcStack/TheVPC"
+        }
+      ],
     });
 });
