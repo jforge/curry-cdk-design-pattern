@@ -1,5 +1,5 @@
 import cdk = require('@aws-cdk/core');
-import Iam = require('../lib/iam-stack');
+import Iam = require('../lib/iam');
 import '@aws-cdk/assert/jest';
 
 test('IamStack Tests', () => {
