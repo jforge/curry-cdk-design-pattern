@@ -1,8 +1,9 @@
+import { SynthUtils } from '@aws-cdk/assert';
 import cdk = require('@aws-cdk/core');
 import Vpc = require('../lib/vpc');
 import '@aws-cdk/assert/jest';
 
-test('VpcStack Tests', () => {
+test('Fine-Grained Assertions', () => {
     const app = new cdk.App();
     // WHEN
     const stack = new Vpc.VpcStack(app, 'VpcStack');
@@ -18,4 +19,12 @@ test('VpcStack Tests', () => {
         }
       ],
     });
+});
+
+test('Snapshot Tests', () => {
+  const app = new cdk.App();
+  // WHEN
+  const stack = new Vpc.VpcStack(app, 'VpcStack');
+  // THEN
+  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
 });
