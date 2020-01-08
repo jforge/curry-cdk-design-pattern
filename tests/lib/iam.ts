@@ -15,7 +15,7 @@ export class IamStack extends cdk.Stack {
     });
 
     const iamUser = new iam.User(this, 'IamUser', {
-      userName: 'iam-user-billing'
+      userName: 'iam-user-billing',
     });
 
     iamGroup.addUser(iamUser);

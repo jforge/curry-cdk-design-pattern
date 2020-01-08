@@ -12,12 +12,6 @@ test('Fine-Grained Assertions', () => {
       EnableDnsHostnames: true,
       EnableDnsSupport: true,
       InstanceTenancy: "default",
-      Tags: [
-        {
-          "Key": "Name",
-          "Value": "VpcStack/TheVPC"
-        }
-      ],
     });
 });
 
