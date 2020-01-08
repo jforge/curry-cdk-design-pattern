@@ -9,7 +9,8 @@ export class IamStack extends cdk.Stack {
     const iamGroup = new iam.Group(this, 'IamGroup', {
       groupName: 'iam-group-billing',
       managedPolicies: [
-        ManagedPolicy.fromAwsManagedPolicyName('job-function/Billing')
+        ManagedPolicy.fromAwsManagedPolicyName('job-function/Billing'),
+        ManagedPolicy.fromAwsManagedPolicyName('ReadOnlyAccess'),
       ]
     });
 
