@@ -6,4 +6,9 @@ import { VpcStack } from '../lib/vpc';
 
 const app = new cdk.App();
 new IamStack(app,'IamStack');
-new VpcStack(app,'VpcStack');
+
+const iVpc = {
+    maxAzs: 2
+  }
+  
+new VpcStack(app,'VpcStack', iVpc);
