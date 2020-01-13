@@ -21,9 +21,7 @@ test('Fine-Grained Assertions', () => {
 
 test('Snapshot Tests', () => {
   const app = new cdk.App();
-  // WHEN
   const stack = new Vpc.VpcStack(app, 'VpcStack', iVpc);
-  // THEN
   expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
 });
 
