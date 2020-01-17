@@ -36,6 +36,9 @@ Object {
       "Type": "AWS::IAM::Group",
     },
     "IamUserCli504FA812": Object {
+      "DependsOn": Array [
+        "IamGroupD291CF67",
+      ],
       "Properties": Object {
         "Groups": Array [
           Object {
@@ -47,6 +50,9 @@ Object {
       "Type": "AWS::IAM::User",
     },
     "IamUserConsole092EC715": Object {
+      "DependsOn": Array [
+        "IamGroupD291CF67",
+      ],
       "Properties": Object {
         "Groups": Array [
           Object {

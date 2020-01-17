@@ -23,5 +23,10 @@ export class AdminStack extends cdk.Stack {
 
     iamGroup.addUser(iamUserCli);
     iamGroup.addUser(iamUserConsole);
+
+    const dependsIamGroup = new cdk.ConcreteDependable();
+    dependsIamGroup.add(iamGroup);
+    iamUserCli.node.addDependency(dependsIamGroup);
+    iamUserConsole.node.addDependency(dependsIamGroup);
   }
 }
