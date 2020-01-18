@@ -2,7 +2,7 @@
 import 'source-map-support/register';
 import cdk = require('@aws-cdk/core');
 import { AdminStack } from '../lib/admin';
-import { IamStack } from '../lib/iam';
+import { IamStack } from '../lib/billing';
 import { VpcStack } from '../lib/vpc';
 
 const app = new cdk.App();

@@ -1,6 +1,6 @@
 import { SynthUtils } from '@aws-cdk/assert';
 import cdk = require('@aws-cdk/core');
-import Iam = require('../lib/iam');
+import Iam = require('../lib/billing');
 import '@aws-cdk/assert/jest';
 
 test('Fine-Grained Assertions', () => {
