@@ -1,0 +1,876 @@
+{
+  "version": "1.16.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "AdminStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "AdminStack.template.json"
+      },
+      "metadata": {
+        "/AdminStack/IamGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IamGroupD291CF67",
+            "trace": [
+              "new Group (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-iam/lib/group.ts:138:19)",
+              "new AdminStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/admin.ts:9:22)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:10:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/AdminStack/IamUserCli/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IamUserCli504FA812",
+            "trace": [
+              "new User (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-iam/lib/user.ts:196:18)",
+              "new AdminStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/admin.ts:17:24)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:10:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/AdminStack/IamUserConsole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IamUserConsole092EC715",
+            "trace": [
+              "new User (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-iam/lib/user.ts:196:18)",
+              "new AdminStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/admin.ts:20:28)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:10:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    },
+    "IamStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "IamStack.template.json"
+      },
+      "metadata": {
+        "/IamStack/IamGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IamGroupD291CF67",
+            "trace": [
+              "new Group (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-iam/lib/group.ts:138:19)",
+              "new IamStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/billing.ts:9:22)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:12:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/IamStack/IamUser/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IamUser83DA77ED",
+            "trace": [
+              "new User (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-iam/lib/user.ts:196:18)",
+              "new IamStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/billing.ts:17:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:12:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    },
+    "VpcStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "VpcStack.template.json"
+      },
+      "metadata": {
+        "/VpcStack/VpcStandard/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardB3B9526E",
+            "trace": [
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1013:21)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet1Subnet65900542",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1330:20)",
+              "new PublicSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1545:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1196:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet1RouteTable9F5AF121",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:19)",
+              "new PublicSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1545:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1196:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet1RouteTableAssociation7669FDDF",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1353:5)",
+              "new PublicSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1545:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1196:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet1DefaultRoute52E212C1",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1369:19)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1057:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1056:46)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet1EIP2999EF60",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:21)",
+              "NatGateway.configureNat (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:145:27)",
+              "Vpc.createNatGateways (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1148:14)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1063:14)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet1NATGateway564B2D77",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1555:17)",
+              "NatGateway.configureNat (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:145:27)",
+              "Vpc.createNatGateways (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1148:14)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1063:14)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet2Subnet42CBD72F",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1330:20)",
+              "new PublicSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1545:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1196:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet2RouteTableD367FA3F",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:19)",
+              "new PublicSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1545:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1196:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet2RouteTableAssociation3662BF44",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1353:5)",
+              "new PublicSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1545:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1196:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet2DefaultRoute8B970526",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1369:19)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1057:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1056:46)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet2EIP93F31E94",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:21)",
+              "NatGateway.configureNat (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:145:27)",
+              "Vpc.createNatGateways (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1148:14)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1063:14)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/publicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardpublicSubnet2NATGateway6EC1566C",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1555:17)",
+              "NatGateway.configureNat (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:145:27)",
+              "Vpc.createNatGateways (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1148:14)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1063:14)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/privateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardprivateSubnet1Subnet94A66483",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1330:20)",
+              "new PrivateSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1584:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1201:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/privateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardprivateSubnet1RouteTable84D78A4C",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:19)",
+              "new PrivateSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1584:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1201:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/privateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardprivateSubnet1RouteTableAssociation831FB396",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1353:5)",
+              "new PrivateSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1584:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1201:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/privateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardprivateSubnet1DefaultRoute55C8A667",
+            "trace": [
+              "PrivateSubnet.addRoute (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1415:19)",
+              "NatGateway.configureSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:158:12)",
+              "NatGateway.configureNat (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:151:12)",
+              "Vpc.createNatGateways (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1148:14)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1063:14)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/privateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardprivateSubnet2Subnet6050B502",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1330:20)",
+              "new PrivateSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1584:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1201:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/privateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardprivateSubnet2RouteTable143AFB99",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1347:19)",
+              "new PrivateSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1584:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1201:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/privateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardprivateSubnet2RouteTableAssociationD13F88B1",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1353:5)",
+              "new PrivateSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1584:5)",
+              "/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1201:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1178:28)",
+              "Vpc.createSubnets (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1167:12)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1041:10)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/privateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardprivateSubnet2DefaultRoute379F4F4F",
+            "trace": [
+              "PrivateSubnet.addRoute (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1415:19)",
+              "NatGateway.configureSubnet (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:158:12)",
+              "NatGateway.configureNat (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:151:12)",
+              "Vpc.createNatGateways (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1148:14)",
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1063:14)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardIGWDB693EAA",
+            "trace": [
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1048:19)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/VpcStack/VpcStandard/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcStandardVPCGWB9B62BE0",
+            "trace": [
+              "new Vpc (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1051:19)",
+              "new VpcStack (/Users/curry/Workspace/aws-cdk-design-pattern/lib/vpc.ts:16:5)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/bin/stack.ts:17:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Module.m._compile (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:814:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/index.ts:817:12)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/curry/Workspace/aws-cdk-design-pattern/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1144:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1164:10)",
+              "Module.load (internal/modules/cjs/loader.js:993:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:892:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/Users/curry/.nodebrew/node/v13.6.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.21.0",
+      "@aws-cdk/cx-api": "1.21.0",
+      "@aws-cdk/aws-iam": "1.21.0",
+      "@aws-cdk/region-info": "1.21.0",
+      "@aws-cdk/aws-ec2": "1.21.0",
+      "@aws-cdk/aws-ssm": "1.21.0",
+      "@aws-cdk/aws-cloudwatch": "1.21.0",
+      "jsii-runtime": "node.js/v13.6.0"
+    }
+  }
+}
