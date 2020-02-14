@@ -1,4 +1,4 @@
-import { SynthUtils } from '@aws-cdk/assert';
+import { SynthUtils , expect as cdkExpect, haveResource } from '@aws-cdk/assert';
 import cdk = require('@aws-cdk/core');
 import Vpc = require('../lib/vpc');
 import '@aws-cdk/assert/jest';
@@ -12,11 +12,11 @@ test('Fine-Grained Assertions', () => {
     // WHEN
     const stack = new Vpc.VpcStack(app, 'VpcStack', iVpc);
     // THEN
-    expect(stack).toHaveResource('AWS::EC2::VPC', {
+    cdkExpect(stack).to(haveResource('AWS::EC2::VPC', {
       EnableDnsHostnames: true,
       EnableDnsSupport: true,
       InstanceTenancy: "default",
-    });
+    }));
 });
 
 test('Snapshot Tests', () => {

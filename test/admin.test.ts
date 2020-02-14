@@ -1,6 +1,6 @@
 import { SynthUtils } from '@aws-cdk/assert';
-import cdk = require('@aws-cdk/core');
 import { AdminStack } from '../lib/admin';
+import cdk = require('@aws-cdk/core');
 import '@aws-cdk/assert/jest';
 
 test('Snapshot Tests', () => {
