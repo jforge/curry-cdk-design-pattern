@@ -1,4 +1,4 @@
-import { SynthUtils , expect as cdkExpect, haveResource } from '@aws-cdk/assert';
+import { SynthUtils , expect as cdkExpect, haveResource, countResources } from '@aws-cdk/assert';
 import cdk = require('@aws-cdk/core');
 import Vpc = require('../lib/vpc');
 import '@aws-cdk/assert/jest';
@@ -41,4 +41,10 @@ test('Validation Tests - maxAzs = 1 is Error', () => {
       maxAzs: 1
     });
   }).toThrowError('maxAzs must be at least 2.');
+});
+
+test('countResources', () => {
+  const app = new cdk.App();
+  const stack = new Vpc.VpcStack(app, 'VpcStack', iVpc);
+  cdkExpect(stack).to(countResources('AWS::EC2::Subnet', 4));
 });
