@@ -6,17 +6,15 @@ import { IamStack } from '../lib/billing';
 import { VpcStack } from '../lib/vpc';
 import { Cloud9Stack } from '../lib/cloud9';
 
+/* app */
 const app = new cdk.App();
 
+/* Stacks */
 new AdminStack(app, 'AdminStack');
-
 new IamStack(app, 'IamStack');
-
-const iVpc = {
-    maxAzs: 2
-  }
-new VpcStack(app, 'VpcStack', iVpc);
-
+new VpcStack(app, 'VpcStack', {
+  maxAzs: 2
+});
 new Cloud9Stack(app, 'Cloud9Stack',{
   env: {
     account: process.env.CDK_DEFAULT_ACCOUNT,
