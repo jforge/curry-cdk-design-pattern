@@ -5,6 +5,7 @@ import { AdminStack } from '../lib/admin';
 import { IamStack } from '../lib/billing';
 import { VpcStack } from '../lib/vpc';
 import { Cloud9Stack } from '../lib/cloud9';
+import { Ec2Stack } from '../lib/ec2';
 
 /* app */
 const app = new cdk.App();
@@ -21,3 +22,4 @@ new Cloud9Stack(app, 'Cloud9Stack',{
     region: process.env.CDK_DEFAULT_REGION
   }
 });
+new Ec2Stack(app, 'Ec2Stack');
